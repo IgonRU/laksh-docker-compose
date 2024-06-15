@@ -1,10 +1,12 @@
 services:
   laksh-front:
+    restart: always
     container_name: laksh-front-container
     build: docker/laksh-front
     image: laksh-front
     ports:
     - 80:80
+    - 443:443
     expose:
       - 80
     networks:
